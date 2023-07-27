@@ -7,12 +7,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("")
 public class Controller {
 
-    @GetMapping("")
-    public ResponseEntity<?> prueba(){
+    @GetMapping("/api")
+    public ResponseEntity<?> testApi(){
         return new ResponseEntity<>("Hola mundo spring boot ", HttpStatus.OK);
+    }
+
+    @GetMapping("")
+    public ResponseEntity<?> message(){
+        return new ResponseEntity<>("Welcome page\nHello user!!!", HttpStatus.OK);
     }
 
 }
