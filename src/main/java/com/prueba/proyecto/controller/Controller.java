@@ -20,4 +20,9 @@ public class Controller {
         return new ResponseEntity<>("Welcome page\nHello user!!!", HttpStatus.OK);
     }
 
+    @GetMapping("/endpoint")
+    public ResponseEntity<?> endpoint(){
+        return new ResponseEntity<>("Endpoint de prueba!!!", HttpStatus.OK);
+    }
+
 }
